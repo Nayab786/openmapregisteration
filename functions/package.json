@@ -17,7 +17,8 @@
     "firebase-admin": "^8.6.0",
     "firebase-functions": "^3.3.0",
     "handlebars": "^4.5.3",
-    "cookie-parser": "^1.4.4"
+    "cookie-parser": "^1.4.4",
+    "nodemailer": "^6.4.2"
   },
   "devDependencies": {
     "firebase-functions-test": "^0.1.6"

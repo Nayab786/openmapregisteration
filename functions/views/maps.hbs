@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    Email: <input type = "email" id= "mail">
     <button>Oppose</button>
     <div id="map" style="border: 2px solid black;">{{db_result}}</div>
     <script>
@@ -46,12 +47,15 @@
             }
 
             function showPosition(position) {
+                alert(document.getElementById("mail").value);
                 $.post("/insert_data",
                     {
                         lat: position.coords.latitude,
-                        long: position.coords.longitude
+                        long: position.coords.longitude,
+                        email: document.getElementById("mail").value
                     },
                     function (data, status) {
+                        document.getElementById("map").innerHTML=data;
                         alert("Data: " + data + "\nStatus: " + status);
                     });
             }
